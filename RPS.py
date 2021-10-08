@@ -1,19 +1,15 @@
-import numpy as np
 import random
 
 order = {}
-opponent_history = []
 
-def player(prev_play):
-  global opponent_history, order
+def player(prev_play, opponent_history=[]):
+  global order
 
   n = 3
 
   if prev_play in ["R","P","S"]:
     opponent_history.append(prev_play)
 
-  # default 
-   
   guess = "R"
 
   if len(opponent_history) >= n:
